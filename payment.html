@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment - Pet Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .payment-box {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .payment-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .payment-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .payment-box input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .payment-box button {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-box">
+    <h2>Payment Details</h2>
+
+    <!-- Example Image, you can connect this from upload.html using localStorage later -->
+    <img src="https://placedog.net/300" alt="Uploaded Pet">
+
+    <input type="text" placeholder="Pet Name" value="Buddy" required readonly />
+    <label>From Date:</label>
+    <input type="date" required />
+    <label>To Date:</label>
+    <input type="date" required />
+    <input type="number" placeholder="Enter Price (₹)" required />
+
+    <button onclick="payNow()">Pay Now</button>
+  </div>
+
+  <script>
+    function payNow() {
+      alert("Payment Successful! Thank you for booking.");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

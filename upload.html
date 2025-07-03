@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Pet Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .upload-box {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 350px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .upload-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .upload-box input,
+    .upload-box textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .upload-box input[type="file"] {
+      padding: 5px;
+    }
+
+    .upload-box button {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .upload-box img {
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="upload-box">
+    <h2>Upload Pet Details</h2>
+
+    <input type="file" id="petImage" accept="image/*" onchange="previewImage(event)" required />
+    <img id="preview" />
+
+    <input type="text" placeholder="Pet Name" required />
+    <input type="number" placeholder="Age (in years)" required />
+    <textarea placeholder="Additional Info (optional)"></textarea>
+
+    <button onclick="goToPayment()">Next</button>
+  </div>
+
+  <script>
+    function previewImage(event) {
+      const preview = document.getElementById('preview');
+      preview.src = URL.createObjectURL(event.target.files[0]);
+      preview.style.display = 'block';
+    }
+
+    function goToPayment() {
+      // Here you can store the data temporarily using localStorage if needed
+      window.location.href = 'payment.html';
+    }
+  </script>
+</body>
+</html>

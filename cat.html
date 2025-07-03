@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat</title>
+    <link rel="stylesheet" href="pet.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2 class="logo"><a href="index.html">🐾 Pets</a></h2>
+    <ul>
+      <li><a href="dog.html">Dog</a></li>
+      <li><a href="cat.html">Cat</a></li>
+      <li><a href="#">Other Pets</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#" onclick="openFeedback()">Feedback</a></li>
+    </ul>
+  </div>
+<!-- Main Content -->
+  <div class="main">
+    <!-- Top Bar -->
+    <div class="topbar">
+      <input type="text" placeholder="Search pets..." class="searchbar" />
+      <button class="upload-btn" onclick="window.location.href='upload.html'">+ Upload Pet</button>
+    </div>
+
+    <!-- cat Cards -->
+    <div class="pet-grid">
+      <div class="pet-card" onclick="window.location.href='upload.html'">
+        <img src="cat-img/61FXqYGXt4L.jpg" alt="Dog 1">
+        <h3>BaGar Billa</h3>
+      </div>
+      <div class="pet-card" onclick="window.location.href='upload.html'">
+        <img src="cat-img/71PNspIJ3GL.jpg" alt="Dog 2">
+        <h3>Billu</h3>
+      </div>
+      <div class="pet-card" onclick="window.location.href='upload.html'">
+        <img src="cat-img/81Y-3fhPPHL.jpg" alt="Dog 3">
+        <h3>Badmas</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feedback Popup -->
+  <div id="feedbackPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeFeedback()">&times;</span>
+      <h3>Feedback</h3>
+      <form id="feedbackForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>    
+</body>
+</html>
